@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.7.1
+-- version 4.1.12
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-01-2016 a las 18:47:43
--- Versión del servidor: 5.6.20
--- Versión de PHP: 5.5.15
+-- Tiempo de generación: 23-05-2016 a las 19:10:19
+-- Versión del servidor: 5.6.16
+-- Versión de PHP: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -27,8 +27,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `config` (
-`id` int(11) NOT NULL,
-  `idioma` text NOT NULL
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `idioma` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
@@ -45,11 +46,12 @@ INSERT INTO `config` (`id`, `idioma`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `crm` (
-`fid` int(11) NOT NULL,
+  `fid` int(11) NOT NULL AUTO_INCREMENT,
   `fnombreTarea` text NOT NULL,
   `festado` int(11) NOT NULL,
   `fpasos` text NOT NULL,
-  `fecha` text NOT NULL
+  `fecha` text NOT NULL,
+  PRIMARY KEY (`fid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
@@ -72,7 +74,7 @@ INSERT INTO `crm` (`fid`, `fnombreTarea`, `festado`, `fpasos`, `fecha`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tclientes` (
-`fid` int(11) NOT NULL,
+  `fid` int(11) NOT NULL AUTO_INCREMENT,
   `fnombre` text NOT NULL,
   `fempresa` text NOT NULL,
   `fdireccion` text NOT NULL,
@@ -80,7 +82,8 @@ CREATE TABLE IF NOT EXISTS `tclientes` (
   `ftelefono` text NOT NULL,
   `fmail` text NOT NULL,
   `fnacimiento` date NOT NULL,
-  `Tipo` text NOT NULL
+  `Tipo` text NOT NULL,
+  PRIMARY KEY (`fid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
 
 --
@@ -122,13 +125,14 @@ INSERT INTO `tclientes` (`fid`, `fnombre`, `fempresa`, `fdireccion`, `fpais`, `f
 --
 
 CREATE TABLE IF NOT EXISTS `tmov` (
-`fid` int(11) NOT NULL,
+  `fid` int(11) NOT NULL AUTO_INCREMENT,
   `fnodocumento` text NOT NULL,
   `fcan` text NOT NULL,
   `quie` text NOT NULL,
   `fecha` text NOT NULL,
   `fcodigoproducto` text NOT NULL,
-  `id_quien` int(11) NOT NULL
+  `id_quien` int(11) NOT NULL,
+  PRIMARY KEY (`fid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=235 ;
 
 --
@@ -322,13 +326,14 @@ INSERT INTO `tmov` (`fid`, `fnodocumento`, `fcan`, `quie`, `fecha`, `fcodigoprod
 --
 
 CREATE TABLE IF NOT EXISTS `tproductos` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `fcodigo` text NOT NULL,
   `fnombre` text NOT NULL,
   `fum` text NOT NULL,
   `fpeso` text NOT NULL,
   `fprecio` text NOT NULL,
-  `Preorden` int(11) NOT NULL
+  `Preorden` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=51 ;
 
 --
@@ -382,14 +387,15 @@ INSERT INTO `tproductos` (`id`, `fcodigo`, `fnombre`, `fum`, `fpeso`, `fprecio`,
 --
 
 CREATE TABLE IF NOT EXISTS `tproveedores` (
-`fid` int(11) NOT NULL,
+  `fid` int(11) NOT NULL AUTO_INCREMENT,
   `fnombre` text NOT NULL,
   `fempresa` text NOT NULL,
   `fdireccion` text NOT NULL,
   `fpais` text NOT NULL,
   `ftelefono` text NOT NULL,
   `fmail` text NOT NULL,
-  `fnacimiento` date NOT NULL
+  `fnacimiento` date NOT NULL,
+  PRIMARY KEY (`fid`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
@@ -415,9 +421,10 @@ INSERT INTO `tproveedores` (`fid`, `fnombre`, `fempresa`, `fdireccion`, `fpais`,
 --
 
 CREATE TABLE IF NOT EXISTS `tusuarios` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `fname` text NOT NULL,
-  `fpass` text NOT NULL
+  `fpass` text NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
@@ -428,91 +435,6 @@ INSERT INTO `tusuarios` (`id`, `fname`, `fpass`) VALUES
 (1, 'marlon', '1a1dc91c907325c69271ddf0c944bc72'),
 (4, 'claudio', '1a1dc91c907325c69271ddf0c944bc72');
 
---
--- Índices para tablas volcadas
---
-
---
--- Indices de la tabla `config`
---
-ALTER TABLE `config`
- ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `crm`
---
-ALTER TABLE `crm`
- ADD PRIMARY KEY (`fid`);
-
---
--- Indices de la tabla `tclientes`
---
-ALTER TABLE `tclientes`
- ADD PRIMARY KEY (`fid`);
-
---
--- Indices de la tabla `tmov`
---
-ALTER TABLE `tmov`
- ADD PRIMARY KEY (`fid`);
-
---
--- Indices de la tabla `tproductos`
---
-ALTER TABLE `tproductos`
- ADD PRIMARY KEY (`id`);
-
---
--- Indices de la tabla `tproveedores`
---
-ALTER TABLE `tproveedores`
- ADD PRIMARY KEY (`fid`);
-
---
--- Indices de la tabla `tusuarios`
---
-ALTER TABLE `tusuarios`
- ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT de las tablas volcadas
---
-
---
--- AUTO_INCREMENT de la tabla `config`
---
-ALTER TABLE `config`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT de la tabla `crm`
---
-ALTER TABLE `crm`
-MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=30;
---
--- AUTO_INCREMENT de la tabla `tclientes`
---
-ALTER TABLE `tclientes`
-MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
---
--- AUTO_INCREMENT de la tabla `tmov`
---
-ALTER TABLE `tmov`
-MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=235;
---
--- AUTO_INCREMENT de la tabla `tproductos`
---
-ALTER TABLE `tproductos`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=51;
---
--- AUTO_INCREMENT de la tabla `tproveedores`
---
-ALTER TABLE `tproveedores`
-MODIFY `fid` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
---
--- AUTO_INCREMENT de la tabla `tusuarios`
---
-ALTER TABLE `tusuarios`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
