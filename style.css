@@ -1,0 +1,191 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+.nopadding{
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.wrapper-main{
+	min-height: 720px;
+	padding-top: 20px;
+	background-color: #b8deed;
+}
+
+.wrapper-menu-sup{
+    background-color: #1a5d7b;
+    border-bottom: 4px solid #21749a;
+}
+
+.wrapper-footer{
+	background-color: #1a5d7b;
+	padding: 20px;
+}
+
+.wrapper-footer a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.wrapper-footer a:hover {
+	color: #21749a;
+}
+
+.navbar-nav li:hover{
+  background-color: rgba(236,118,0,1);
+}
+
+
+.footer-int{
+	
+	text-align: center;
+	padding: 5px;
+}
+
+.esc{
+	text-align: center;
+	
+}
+
+.esc a{
+	color:#fff; 
+}
+
+.col-lg-2 .glyphicon{
+	font-size: 3rem;
+}
+
+.esc .thumbnail {
+	background-color: #1a5d7b; 
+	color: #fff;
+
+		-webkit-transition: all 1s ease;/* Safari 3.2+, Chrome */
+	-moz-transition: all 1s ease;/* Firefox 4-15 */
+	-o-transition: all 1s ease;/* Opera 10.5-12.00 */
+	transition: all 1s ease;/* Firefox 16+, Opera 12.50+ */
+
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=146, Color=#333333)";/*IE 8*/
+-moz-box-shadow: 2px 3px 8px #333333;/*FF 3.5+*/
+-webkit-box-shadow: 2px 3px 8px #333333;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+box-shadow: 2px 3px 8px #333333;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=146, Color=#333333); /*IE 5.5-7*/
+
+}
+
+.esc .thumbnail:hover{
+	background-color: #ec7600;
+	color: #fff;
+}
+
+.panel{
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=146, Color=#333333)";/*IE 8*/
+-moz-box-shadow: 2px 3px 8px #333333;/*FF 3.5+*/
+-webkit-box-shadow: 2px 3px 8px #333333;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+box-shadow: 2px 3px 8px #333333;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=146, Color=#333333); /*IE 5.5-7*/
+
+
+}
+
+
+.menu-prin a{
+	text-decoration: none;
+}
+
+.panel{
+		-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=146, Color=#333333)";/*IE 8*/
+-moz-box-shadow: 2px 3px 8px #333333;/*FF 3.5+*/
+-webkit-box-shadow: 2px 3px 8px #333333;/*Saf3-4, Chrome, iOS 4.0.2-4.2, Android 2.3+*/
+box-shadow: 2px 3px 8px #333333;/* FF3.5+, Opera 9+, Saf1+, Chrome, IE10 */
+filter: progid:DXImageTransform.Microsoft.Shadow(Strength=8, Direction=146, Color=#333333); /*IE 5.5-7*/
+
+}
+
+.wrapper-footer{
+	color: #fff;
+	border-top: 4px solid #21749a;
+}
+
+.foot-index{
+	text-align: center;
+}
+
+.foot-index .col-lg-4{
+	padding: 20px 50px;
+}
+
+body{
+	background-color: #b8deed;
+	margin:  0px !important;
+	padding: 0px !important ;
+}
+
+.wrapper-menu-sup{
+	position: fixed;
+	z-index: 2000;
+	width: 100%;
+	top: 0px;
+}
+
+.wrapper-main{
+	margin-top: 70px;
+}
+
+
+#toTop{
+	bottom: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1.5rem;
+	padding: 12px 15px;
+	position: fixed;
+	right: 10px;
+	text-align: center;
+	background-color: rgba(236,118,0,0.6);
+    border: 3px none #000000;
+-moz-border-radius: 3px;/*Firefox*/
+-webkit-border-radius: 3px;/*Safari, Chrome*/
+border-radius: 3px;
+}
+
+
+
+@media screen and (max-width: 768px){
+  .orange_mar{
+  	display: none;
+   }
+}
+
+.mykey{
+	text-align: center;
+	margin-bottom: 20px;
+	color: #1a5d7b;
+}
+
+.center{
+	text-align: center;
+}
+
+
+.testrojo{
+	color: red;
+}
+
+
+.text-big{
+	color: #095085;
+	font-style: italic;
+}
+
+.link-black{
+	color: #000;
+}
+
+
+.Boton-inf{
+	margin-left: 10px;
+}
+
